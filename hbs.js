@@ -231,8 +231,8 @@ define([
                   // grab the params
                   if ( statement.params && typeof Handlebars.helpers[statement.id.string] === 'undefined') {
                     _(statement.params).forEach(function(param) {
-                      if ( _(paramsWithoutParts).contains(param.original) 
-                         || param instanceof Handlebars.AST.StringNode 
+                      if ( _(paramsWithoutParts).contains(param.original)
+                         || param instanceof Handlebars.AST.StringNode
                         || param instanceof Handlebars.AST.IntegerNode
                         || param instanceof Handlebars.AST.BooleanNode
                         ) {
@@ -409,14 +409,6 @@ define([
                       buildMap[compiledName] = text;
                   }
 
-                  //IE with conditional comments on cannot handle the
-                  //sourceURL trick, so skip it if enabled.
-                  /*@if (@_jscript) @else @*/
-                  if (!config.isBuild) {
-                      text += "\r\n//@ sourceURL=" + path;
-                  }
-                  /*@end@*/
-
                   for ( var i in deps ) {
                     if ( deps.hasOwnProperty(i) ) {
                       deps[ i ] = 'hbs!' + deps[ i ].replace(/_/g, '/');
@@ -478,7 +470,7 @@ define([
                 		fetchAndRegister(false);
                 	} else {
                 		throw er;
-                	
+
                 	}
                 }
             }
