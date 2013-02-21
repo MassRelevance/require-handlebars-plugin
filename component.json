@@ -1,7 +1,8 @@
 {
   "name": "hbs",
-  "version": "0.4.0-mr",
+  "version": "0.4.1-mr",
   "main": "./hbs.js",
   "dependencies": {
+    "handlebars": "git@github.com:MassRelevance/handlebars.git#1.0.0-rc.3"
   }
 }
